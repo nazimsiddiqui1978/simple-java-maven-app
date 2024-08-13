@@ -10,14 +10,6 @@ pipeline {
         NEXUS_REPOSITORY = "maven-hosted-nazim"   // repository what you have created
         NEXUS_CREDENTIAL_ID = "nexus-credentials" //jenkins user-id created by you
     }
-    stages {
-        stage("Clone code from VCS") {
-            steps {
-                script {
-                    git 'https://github.com/singhakumar/simple-java-maven-app.git';
-                }
-            }
-        }
         stage("Maven Build") {
             steps {
                 script {
